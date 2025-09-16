@@ -15,7 +15,7 @@ const statusLabels: Record<Task['status'], { label: string; color: string }> = {
 const ProjectDetail: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { user,logout } = useAuth();
   const { joinProject, leaveProject } = useSocketConnection();
 
   const [project, setProject] = useState<Project | null>(null);
@@ -200,6 +200,12 @@ const ProjectDetail: React.FC = () => {
               >
                 <Plus className="h-4 w-4 mr-2" />
                 New Task
+              </button>
+              <button
+                onClick={logout}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                Logout
               </button>
             </div>
           </div>

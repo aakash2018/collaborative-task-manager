@@ -17,7 +17,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: process.env.NODE_ENV === 'production' ? false : ["http://localhost:3000"],
+    origin: process.env.NODE_ENV === 'production' ? ['https://collaborative-task-manager-2abj.onrender.com'] : ["http://localhost:3000"],
     methods: ["GET", "POST"]
   }
 });
@@ -25,7 +25,7 @@ const io = new Server(server, {
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? false : ["http://localhost:3000"],
+  origin: process.env.NODE_ENV === 'production' ? ['https://collaborative-task-manager-2abj.onrender.com'] : ["http://localhost:3000"],
   credentials: true
 }));
 

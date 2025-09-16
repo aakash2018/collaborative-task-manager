@@ -81,7 +81,7 @@ const Dashboard: React.FC = () => {
           <div className="flex justify-between items-center py-6">
             <div>
               <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-              <p className="text-gray-600">Welcome back, {user?.name}!</p>
+              <p className="text-gray-600">Welcome back, {user?.email}!</p>
             </div>
             <div className="flex items-center space-x-4">
               <button
